@@ -39,4 +39,4 @@ else
 fi
 
 # Install Homebrew packages in Bundle file
-brew bundle
+brew bundle --file=~/dotfiles/packages/Brewfile
