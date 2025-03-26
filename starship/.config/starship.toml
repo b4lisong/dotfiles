@@ -1,0 +1,36 @@
+# kali linux prompt copy
+# https://gist.githubusercontent.com/mIcHyAmRaNe/a6ee5ca3311d61ae6f181e691643925d/raw/cc26b710fce3c21fe15edf6623be5cd12e4d5a32/starship.toml
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = """
+[┌╴\\(](bold green)[$username㉿$hostname](bold blue)[\\)](bold green)$os $time\
+| $all[└─](green) $character\
+"""
+
+[character]
+success_symbol = "💲"
+error_symbol = "✗"
+
+[username]
+style_user = 'blue bold'
+style_root = 'red bold'
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol](bold blue)[$hostname](bold blue)'
+trim_at = '.companyname.com'
+disabled = false
+
+# No need for env variables as starship provides a way to show your current distro
+[os]
+style = "bold green"
+format = "on [$symbol$arch$name](style)"
+
+[os.symbols]
+Windows = "🔷"
+Linux = "🐧"
