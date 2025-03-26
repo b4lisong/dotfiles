@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# Set up macOS defaults
+DEFAULTS_SCRIPT="macos_defaults.sh"
+# Check if the file exists
+if [ ! -f "$DEFAULTS_SCRIPT" ]; then
+    echo "Error: File '$DEFAULTS_SCRIPT' does not exist." >&2
+    exit 1
+fi
+
+# Make the file executable (if it isn't already)
+chmod +x "$DEFAULTS_SCRIPT"
+
+# Execute the file
+echo "Setting macOS defaults..."
+./"$DEFAULTS_SCRIPT"
+
 # Check if Xcode Command Line Tools are installed by querying the path.
 if xcode-select -p > /dev/null 2>&1; then
     echo "Xcode Command Line Tools are already installed."
