@@ -1,0 +1,6 @@
+# Essentials
+git
+#vim
+htop
+curl
+build-essential
