@@ -1,0 +1,5 @@
+tap "microsoft/git"
+brew "git"
+brew "mas"
+brew "stow"
+cask "git-credential-manager"
