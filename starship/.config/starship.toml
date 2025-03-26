@@ -1,17 +1,18 @@
-# kali linux prompt copy
-# https://gist.githubusercontent.com/mIcHyAmRaNe/a6ee5ca3311d61ae6f181e691643925d/raw/cc26b710fce3c21fe15edf6623be5cd12e4d5a32/starship.toml
+# kali linux prompt copy (w/modifications)
+# Inspo:
+#   https://gist.githubusercontent.com/mIcHyAmRaNe/a6ee5ca3311d61ae6f181e691643925d/raw/cc26b710fce3c21fe15edf6623be5cd12e4d5a32/starship.toml
 
 # Inserts a blank line between shell prompts
 add_newline = true
 
 format = """
-[┌╴\\(](bold green)[$username㉿$hostname](bold blue)[\\)](bold green)$os $time\
+[┌╴\\(](bold green)[$username$os$hostname](bold blue)[\\)](bold green) $time\
 | $all[└─](green) $character\
 """
 
 [character]
-success_symbol = "💲"
-error_symbol = "✗"
+success_symbol = "[>](bold green)"
+error_symbol = "[✗](bold red)"
 
 [username]
 style_user = 'blue bold'
@@ -28,9 +29,11 @@ disabled = false
 
 # No need for env variables as starship provides a way to show your current distro
 [os]
-style = "bold green"
-format = "on [$symbol$arch$name](style)"
+style = "bold white"
+format = "@[$symbol$arch](style)"
+disabled = false
 
 [os.symbols]
+Macos = ""
 Windows = "🔷"
 Linux = "🐧"
