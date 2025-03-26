@@ -3,4 +3,8 @@ brew "git"
 brew "lazygit"
 brew "mas"
 brew "stow"
+cask "1password-cli"
 cask "git-credential-manager"
+cask "scroll-reverser"
+mas "1Password for Safari", id: 1569813296
+mas "Tailscale", id: 1475387142
