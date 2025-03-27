@@ -11,4 +11,6 @@ stow
 starship
 
 ## Headless
+kali-linux-headless
 lf
+golang
