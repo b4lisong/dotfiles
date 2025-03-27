@@ -9,3 +9,4 @@ libsecret-1-dev
 tmux
 fbterm
 ncurses-term
+dbus-x11
