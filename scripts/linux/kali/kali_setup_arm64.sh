@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+## Core
 # Enable strict mode for safer execution
 set -euo pipefail
 
@@ -16,3 +17,6 @@ fi
 echo "🔄 Updating system and installing packages from $PACKAGE_LIST..."
 sudo apt update && sudo apt install -y $(grep -vE '^\s*#' "$PACKAGE_LIST")
 
+## Headless
+# install lazygit
+go install github.com/jesseduffield/lazygit@latest

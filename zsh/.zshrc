@@ -18,3 +18,9 @@ eval "$(starship init zsh)"
 
 # Aliases
 source ~/.zsh_aliases_core # aliases common to all platforms
+
+# Ensure $HOME/go/bin is in the PATH
+if [[ ":$PATH:" != *":$HOME/go/bin:"* ]]; then
+  export PATH="$HOME/go/bin:$PATH"
+fi
+
