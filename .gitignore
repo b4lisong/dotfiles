@@ -11,3 +11,6 @@ Brewfile.lock.json
 
 # lazygit
 lazygit/.config/lazygit/state.yml
+
+# swap/working fiiles
+*.swp
