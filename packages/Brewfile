@@ -4,10 +4,12 @@ brew "lazygit"
 brew "mas"
 brew "starship"
 brew "stow"
+brew "wget"
 cask "1password-cli"
 cask "font-sauce-code-pro-nerd-font"
 cask "font-symbols-only-nerd-font"
 cask "git-credential-manager"
+cask "iterm2"
 cask "scroll-reverser"
 mas "1Password for Safari", id: 1569813296
 mas "Tailscale", id: 1475387142
