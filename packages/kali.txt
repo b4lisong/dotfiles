@@ -1,6 +1,6 @@
 # Essentials
 git
-#vim
+vim
 htop
 curl
 build-essential
