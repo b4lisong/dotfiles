@@ -6,3 +6,6 @@ curl
 build-essential
 libsecret-1-0
 libsecret-1-dev
+tmux
+fbterm
+ncurses-term
