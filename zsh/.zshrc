@@ -15,3 +15,6 @@ fi
 # Starship prompt
 # https://starship.rs/guide/
 eval "$(starship init zsh)"
+
+# Aliases
+source ~/.zsh_aliases_core # aliases common to all platforms
