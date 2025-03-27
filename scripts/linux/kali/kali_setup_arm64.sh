@@ -4,7 +4,7 @@
 set -euo pipefail
 
 # Define package list file
-PACKAGE_LIST="$HOME/dotfiles/packages/kali.txt"
+PACKAGE_LIST="$HOME/dotfiles/packages/linux/kali/kali.txt"
 
 # Check if package list exists
 if [[ ! -f "$PACKAGE_LIST" ]]; then

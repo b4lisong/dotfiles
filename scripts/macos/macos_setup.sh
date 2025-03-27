@@ -54,4 +54,4 @@ else
 fi
 
 # Install Homebrew packages in Bundle file
-brew bundle --file=~/dotfiles/packages/Brewfile
+brew bundle --file=~/dotfiles/packages/macos/Brewfile
