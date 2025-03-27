@@ -7,3 +7,5 @@ build-essential
 tmux
 fbterm
 ncurses-term
+stow
+starship
