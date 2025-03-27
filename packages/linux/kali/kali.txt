@@ -1,4 +1,4 @@
-# Essentials
+## Core
 git
 vim
 htop
@@ -9,3 +9,6 @@ fbterm
 ncurses-term
 stow
 starship
+
+## Headless
+lf
