@@ -9,6 +9,7 @@ fbterm
 ncurses-term
 stow
 starship
+live-build
 
 ## Headless
 kali-linux-headless
