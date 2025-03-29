@@ -15,3 +15,7 @@ kali-linux-headless
 lf
 golang
 gdb
+network-manager
+
+## GUI
+kali-desktop-i3
