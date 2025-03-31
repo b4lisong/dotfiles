@@ -11,8 +11,9 @@ format = """
 """
 
 [character]
-success_symbol = "[>](bold green)"
+success_symbol = "[❯](bold green)"
 error_symbol = "[✗](bold red)"
+vicmd_symbol = "[CMD❮](bold yellow)"
 
 [username]
 style_user = 'blue bold'
