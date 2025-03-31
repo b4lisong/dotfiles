@@ -25,10 +25,10 @@ configuration {
 
 /*---------- Global Properties ----------*/
 * {
-    background:                     #060B15;
-    background-alt:                 #060B15FF;
-    foreground:                     #E6E6E6;
-    selected:                       #4081F2;
+    background:                     #1e1e2e;
+    background-alt:                 #181825FF;
+    foreground:                     #cdd6f4;
+    selected:                       #11111b;
     active:                         #51B8A3;
     urgent:                         #EC0101;
 

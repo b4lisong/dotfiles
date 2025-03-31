@@ -25,14 +25,14 @@ configuration {
 
 /*---------- Global Properties ----------*/
 * {
-    font:                   "JetBrainsMono Nerd Font 16";
+    font:                   "SauceCodePro Nerd Font Mono 16";
 
-    background:             #060B15;
-    background-transparent: #060B15BB; 
-    background-alt:         #282B31FF;
-    foreground:             #E6E6E6FF;
-    foreground-alt:         #010101FF;
-    selected:               #4081F2ff;	
+    background:             #1e1e2e;
+    background-transparent: #1e1e2ebb; 
+    background-alt:         #181825ff;
+    foreground:             #cdd6f4FF;
+    foreground-alt:         #cdd6f4FF;
+    selected:               #11111bff;	
 
     border-colour:          var(selected);
     background-colour:      var(background-transparent);

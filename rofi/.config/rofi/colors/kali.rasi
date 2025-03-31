@@ -12,11 +12,11 @@
  **/
 
 * {
-    background:     #060B15;
-    background-alt: #060B15FF;
-    foreground:     #E6E6E6;
+    background:     #1e1e2e;
+    background-alt: #181825;
+    foreground:     #cdd6f4;
     
-    blue:           #277FFF;
-    teal:           #47D4B9;
-    red:            #EC0101;
+    blue:           #89b4fa;
+    teal:           #94e2d5;
+    red:            #f38ba8;
 }

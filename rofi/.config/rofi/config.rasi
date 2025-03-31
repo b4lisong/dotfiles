@@ -93,7 +93,7 @@ configuration {
 
     /*---------- Misc setting ----------*/
     terminal: "kitty";
-    font: "JetBrainsMono Nerd Font 12";
+    font: "SauceCodePro Nerd Font Mono 12";
     sort: false;
     threads: 0;
     click-to-exit: true;

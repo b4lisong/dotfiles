@@ -29,12 +29,12 @@ configuration {
 
 /*---------- Global Properties ----------*/
 * {
-    background:                     #060B15;
-    background-alt:                 #060B15;
-    foreground:                     #E6E6E6;
-    selected:                       #4081F2;
-    active:                         #51B8A3;
-    urgent:                         #EC0101;
+    background:                     #1e1e2e;
+    background-alt:                 #181825;
+    foreground:                     #cdd6f4;
+    selected:                       #ffffff;
+    active:                         #89dceb;
+    urgent:                         #f38ba8;
 
     border-colour:                  var(foreground);
     handle-colour:                  var(foreground);
