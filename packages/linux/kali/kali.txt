@@ -17,6 +17,7 @@ golang
 gdb
 network-manager
 ripgrep
+cargo
 
 ## GUI
 kali-desktop-i3

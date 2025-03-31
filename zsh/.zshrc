@@ -24,3 +24,7 @@ if [[ ":$PATH:" != *":$HOME/go/bin:"* ]]; then
   export PATH="$HOME/go/bin:$PATH"
 fi
 
+# Ensure $HOME/.cargo/bin is in the PATH
+if [[ ":$PATH:" != *":$HOME/.cargo/bin:"* ]]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
