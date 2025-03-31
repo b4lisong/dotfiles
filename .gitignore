@@ -14,3 +14,6 @@ lazygit/.config/lazygit/state.yml
 
 # swap/working fiiles
 *.swp
+
+# logs
+*.log
