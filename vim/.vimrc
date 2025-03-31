@@ -22,9 +22,15 @@ set number
 " Highlight the current line
 set cursorline
 
-" Enable search highlighting
-set hlsearch
-
 " Enable incremental search
 set incsearch
 
+" Enable highlighting all the matches in incsearch mode
+" But don't enable hlsearch always
+augroup vimrc-incsearch-highlight
+  autocmd!
+  autocmd CmdlineEnter [/\?] :set hlsearch
+  autocmd CmdlineLeave [/\?] :set nohlsearch
+augroup END
+
+colorscheme catppuccin_mocha
