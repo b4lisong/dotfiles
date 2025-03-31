@@ -3,6 +3,8 @@
 	email = 5397809+b4lisong@users.noreply.github.com
 [credential]
 	helper = /usr/local/share/gcm-core/git-credential-manager
+	helper = /home/balisong/.dotnet/tools/git-credential-manager
+	credentialStore = secretservice
     helper = cache --timeout=3600
 [credential "https://dev.azure.com"]
 	useHttpPath = true

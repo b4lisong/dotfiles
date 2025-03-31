@@ -28,3 +28,15 @@ fi
 if [[ ":$PATH:" != *":$HOME/.cargo/bin:"* ]]; then
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
+
+# Ensure $HOME/.dotnet is in the PATH
+if [[ ":$PATH:" != *":$HOME/.dotnet:"* ]]; then
+  export PATH="$HOME/.dotnet:$PATH"
+fi
+
+# Ensure $HOME/.dotnet/tools is in the PATH
+if [[ ":$PATH:" != *":$HOME/.dotnet/tools:"* ]]; then
+  export PATH="$HOME/.dotnet/tools:$PATH"
+fi
+
+export DOTNET_ROOT=$HOME/.dotnet
