@@ -16,6 +16,7 @@ lf
 golang
 gdb
 network-manager
+ripgrep
 
 ## GUI
 kali-desktop-i3
