@@ -2,3 +2,7 @@ TODO:
 script to check for (and add) to `/etc/pam.d/login`:
 auth       optional     pam_gnome_keyring.so
 session    optional     pam_gnome_keyring.so auto_start
+
+# yubikey passwordless sudo
+script to check for (and add) to `/etc/pam.d/sudo`:
+auth    sufficient  pam_u2f.so
