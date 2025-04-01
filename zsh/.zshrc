@@ -16,6 +16,7 @@ fi
 # https://starship.rs/guide/
 eval "$(starship init zsh)"
 
+
 # vim-style keybindings
 bindkey -v
 bindkey "^R" history-incremental-search-backward
@@ -37,6 +38,9 @@ PROMPT_EOL_MARK=""
 
 # Aliases
 source ~/.zsh_aliases_core # aliases common to all platforms
+if [[ "$(uname -s)" == "Linux" ]]; then
+    source ~/.zsh_aliases_linux
+fi
 
 # enable completion features
 autoload -Uz compinit
@@ -144,3 +148,8 @@ if [[ ":$PATH:" != *":$HOME/.dotnet/tools:"* ]]; then
 fi
 
 export DOTNET_ROOT=$HOME/.dotnet
+export XCURSOR_THEME=catppuccin-mocha-blue-cursors
+
+# init zoxide (cd replacement)
+# must be at the end of .zshrc
+eval "$(zoxide init --cmd cd zsh)"
