@@ -32,3 +32,5 @@ Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
+Xcursor.size: 48
+Xcursor.theme: catppuccin-mocha-blue-cursors
