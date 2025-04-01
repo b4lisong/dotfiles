@@ -1,0 +1,22 @@
+## Core
+git
+vim
+htop
+curl
+build-essential
+tmux
+ncurses-term
+stow
+starship
+
+## Headless
+lf
+golang
+gdb
+network-manager
+ripgrep
+cargo
+zoxide
+fzf
+
+## GUI
