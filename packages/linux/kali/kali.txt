@@ -18,6 +18,8 @@ gdb
 network-manager
 ripgrep
 cargo
+zoxide
+fzf
 
 ## GUI
 kali-desktop-i3
