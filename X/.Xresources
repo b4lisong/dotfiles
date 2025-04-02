@@ -24,8 +24,8 @@
 *color14:    #28A1E2
 *color15:    #FFFFFF
 
-!Xft.dpi: 96
-Xft.dpi: 192
+Xft.dpi: 96
+!Xft.dpi: 192
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
