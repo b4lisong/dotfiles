@@ -18,3 +18,6 @@ lazygit/.config/lazygit/state.yml
 # logs
 *.log
 .netrwhist
+
+# other
+AppSupport
