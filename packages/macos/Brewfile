@@ -26,6 +26,7 @@ mas "1Password for Safari", id: 1569813296
 mas "Tailscale", id: 1475387142
 vscode "andenetalexander.vim-cheatsheet"
 vscode "catppuccin.catppuccin-vsc"
+vscode "docker.docker"
 vscode "foxundermoon.shell-format"
 vscode "github.copilot"
 vscode "github.copilot-chat"
