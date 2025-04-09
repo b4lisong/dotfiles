@@ -16,6 +16,7 @@ cask "font-sauce-code-pro-nerd-font"
 cask "font-symbols-only-nerd-font"
 cask "git-credential-manager"
 cask "iterm2"
+cask "parsec"
 cask "scroll-reverser"
 cask "visual-studio-code"
 mas "1Password for Safari", id: 1569813296
