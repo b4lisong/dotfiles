@@ -69,8 +69,13 @@ setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
 
 # enable auto-suggestions based on the history
-if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-    . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] || \
+   [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+        . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    else
+        . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    fi
     # change suggestion color
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
@@ -80,8 +85,14 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-    . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# enable syntax-highlighting
+if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] || \
+   [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+        . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    else
+        . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    fi
     ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
     ZSH_HIGHLIGHT_STYLES[default]=none
     ZSH_HIGHLIGHT_STYLES[unknown-token]=underline
@@ -124,6 +135,25 @@ if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
     ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=yellow,bold
     ZSH_HIGHLIGHT_STYLES[bracket-level-5]=fg=cyan,bold
     ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
+fi
+
+# zsh-autocomplete
+if [ -f /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh ] || \
+   [ -f /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]; then
+    if [ -f /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]; then
+        source /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+    else
+        source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+    fi
+fi
+
+# zsh-completions (add to fpath if not already present)
+if [[ -d /usr/share/zsh/site-functions ]] || [[ -d /usr/share/zsh/plugins/zsh-completions ]]; then
+    if [[ -d /usr/share/zsh/plugins/zsh-completions ]]; then
+        fpath+=/usr/share/zsh/plugins/zsh-completions
+    else
+        fpath+=/usr/share/zsh/site-functions
+    fi
 fi
 
 ## PATH and exports
