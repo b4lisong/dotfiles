@@ -31,10 +31,11 @@ disabled = false
 # No need for env variables as starship provides a way to show your current distro
 [os]
 style = "bold white"
-format = "@[$symbol$arch](style)"
+format = "@[$symbol$arch](style) "
 disabled = false
 
 [os.symbols]
 Macos = ""
-Windows = "🔷"
-Linux = "🐧"
+Arch = ""
+Windows = ""
+Linux = ""
