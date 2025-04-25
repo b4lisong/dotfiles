@@ -38,8 +38,13 @@ PROMPT_EOL_MARK=""
 
 # Aliases
 source ~/.zsh_aliases_core # aliases common to all platforms
+# Linux-only aliases
 if [[ "$(uname -s)" == "Linux" ]]; then
     source ~/.zsh_aliases_linux
+fi
+# Arch Linux specific aliases
+if [ -f /etc/arch-release ]; then
+    source ~/.zsh_aliases_arch
 fi
 
 # enable completion features

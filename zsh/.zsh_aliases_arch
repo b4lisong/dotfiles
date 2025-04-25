@@ -1,0 +1,6 @@
+# Only alias pacman and yay if 'snp' is available
+if command -v snp >/dev/null 2>&1; then
+    alias pacman='snp pacman'
+    alias yay='snp yay'
+fi
+
