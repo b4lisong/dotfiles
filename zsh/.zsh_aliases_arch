@@ -1,6 +1,40 @@
-# Only alias pacman and yay if 'snp' is available
+## SNP wrappers for pacman & yay
+## Note: `sudo pacman` bypasses snp. For operations which make changes, sudo is called
+##       along with snp, so we don't need to `sudo pacman` anymore.
+# Remove any existing pacman/yay aliases to avoid conflict with function definitions
+unalias pacman 2>/dev/null
+unalias yay 2>/dev/null
+
+# Only define the smart wrappers if 'snp' is available in the PATH
 if command -v snp >/dev/null 2>&1; then
-    alias pacman='snp pacman'
-    alias yay='snp yay'
+
+  # pacman function: only wraps system-modifying commands with 'snp'
+  pacman() {
+    # Check if the first argument ($1) is a system-changing operation
+    # The options below are for install, sync, upgrade, remove, and local upgrade operations
+    case "$1" in
+      -S|-Sy|-Syu|-Su|-Syyu|-Syy|-R|-U)
+        # If so, run pacman under 'snp' to create pre/post Snapper snapshots
+        command sudo snp pacman "$@"
+        ;;
+      *)
+        # Otherwise, just run pacman normally (for search/query/etc)
+        command pacman "$@"
+        ;;
+    esac
+  }
+
+  # yay function: same logic as above, for yay (AUR helper)
+  yay() {
+    case "$1" in
+      -S|-Sy|-Syu|-Su|-Syyu|-Syy|-R|-U)
+        command snp yay "$@"
+        ;;
+      *)
+        command yay "$@"
+        ;;
+    esac
+  }
+
 fi
 
