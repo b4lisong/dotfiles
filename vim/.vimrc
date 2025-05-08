@@ -16,6 +16,9 @@ set autoindent
 " Enable syntax highlighting
 syntax on
 
+" Enable filetype detection, load any filetype-specific plugins, indentation, etc.
+filetype plugin indent on
+
 " Show line numbers
 set number
 
